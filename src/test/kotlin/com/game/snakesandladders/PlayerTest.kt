@@ -27,4 +27,31 @@ class PlayerTest {
         testPlayer.currentPosition = 99
         assertFalse(testPlayer.won())
     }
+
+    @Test
+    fun `Given the player When move the token 3 spaces Then the current position should be eq to 4`(){
+        testPlayer.moveToken(3)
+        assertEquals(4, testPlayer.currentPosition)
+    }
+
+    @Test
+    fun `Given the player When on 94 and die eq 6 Then the current position should be eq to 100`(){
+        testPlayer.currentPosition = 94
+        testPlayer.moveToken(6)
+        assertEquals(100, testPlayer.currentPosition)
+    }
+
+    @Test
+    fun `Given the player When on 95 and die eq 6 Then the current position should be eq to 95`(){
+        testPlayer.currentPosition = 95
+        testPlayer.moveToken(6)
+        assertEquals(95, testPlayer.currentPosition)
+    }
+
+    @Test
+    fun `Given the player When on 95 and die eq 1 Then the current position should be eq to 96`(){
+        testPlayer.currentPosition = 95
+        testPlayer.moveToken(1)
+        assertEquals(96, testPlayer.currentPosition)
+    }
 }
