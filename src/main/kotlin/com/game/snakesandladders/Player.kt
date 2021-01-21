@@ -9,4 +9,10 @@ data class Player(var currentPosition: Int = 1) {
     fun won(): Boolean{
         return currentPosition == 100
     }
+
+    fun moveToken(times: Int){
+        if(currentPosition + times <= 100){
+            currentPosition += times
+        }
+    }
 }
