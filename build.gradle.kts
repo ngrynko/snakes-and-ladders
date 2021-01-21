@@ -22,9 +22,10 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
+	implementation ("com.google.code.gson:gson")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("io.projectreactor:reactor-test")
-	implementation ("com.google.code.gson:gson")
+	testImplementation( "org.mockito:mockito-inline")
 }
 
 tasks.withType<KotlinCompile> {
